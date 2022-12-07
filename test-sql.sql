@@ -42,7 +42,8 @@ and (EmployeeID = 2 or EmployeeID = 5)
 and (ShipCountry = 'France' or ShipCountry = 'Sweden' or ShipCountry = 'Canada')
 
 --Q9
-select TBL1.*, TBL2.OrderDate,TBL2.EmployeeID,TBL2.CustomerID from  [Order Details] TBL1 inner join Orders TBL2 on TBL1.OrderID = TBL2.OrderID
+select TBL1.*, TBL2.OrderDate,TBL2.EmployeeID,TBL2.CustomerID from  [Order Details] TBL1 inner join Orders TBL2 on TBL1.OrderID = TBL2.OrderID or TBL1.OrderID != TBL2.OrderID  
+where TBL1.OrderID  = 10248 and CustomerID like 'VINET' order by UnitPrice,EmployeeID
 --היה לי בעיה בטבלאות
 
 
